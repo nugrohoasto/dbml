@@ -1,0 +1,164 @@
+{
+  "version": "3.0.0",
+  "darkMode": true,
+  "gridEnabling": false,
+  "currentViewName": null,
+  "defaultView": {
+    "detailLevel": "All",
+    "relationshipMode": "All",
+    "tablePositions": [
+      {
+        "name": "institutions",
+        "schemaName": "public",
+        "x": 16.149658203125,
+        "y": -332.46811729986246
+      },
+      {
+        "name": "branches",
+        "schemaName": "public",
+        "x": 12,
+        "y": 12
+      },
+      {
+        "name": "type_user",
+        "schemaName": "public",
+        "x": 659.7379359180367,
+        "y": -114.53418096928262
+      },
+      {
+        "name": "users",
+        "schemaName": "public",
+        "x": 403.57798418724974,
+        "y": 375.8642187411942
+      },
+      {
+        "name": "password",
+        "schemaName": "public",
+        "x": 405.13950762474974,
+        "y": 634.0060961352239
+      },
+      {
+        "name": "user_access",
+        "schemaName": "public",
+        "x": 402.79575762474974,
+        "y": 113.15041409379171
+      },
+      {
+        "name": "user_credentials",
+        "schemaName": "public",
+        "x": 12,
+        "y": 681.8642187411942
+      }
+    ],
+    "tableGroupCollapseStates": [],
+    "stickyNoteLayouts": [],
+    "referencePaths": [
+      {
+        "firstFieldNames": [
+          "institution_id"
+        ],
+        "firstTableName": "branches",
+        "firstSchemaName": "public",
+        "firstRelation": "1",
+        "secondFieldNames": [
+          "id"
+        ],
+        "secondTableName": "institutions",
+        "secondSchemaName": "public",
+        "secondRelation": "*",
+        "checkPoints": []
+      },
+      {
+        "firstFieldNames": [
+          "user_id"
+        ],
+        "firstTableName": "password",
+        "firstSchemaName": "public",
+        "firstRelation": "*",
+        "secondFieldNames": [
+          "id"
+        ],
+        "secondTableName": "users",
+        "secondSchemaName": "public",
+        "secondRelation": "1",
+        "checkPoints": []
+      },
+      {
+        "firstFieldNames": [
+          "user_id"
+        ],
+        "firstTableName": "user_access",
+        "firstSchemaName": "public",
+        "firstRelation": "*",
+        "secondFieldNames": [
+          "id"
+        ],
+        "secondTableName": "users",
+        "secondSchemaName": "public",
+        "secondRelation": "1",
+        "checkPoints": []
+      },
+      {
+        "firstFieldNames": [
+          "type_user_id"
+        ],
+        "firstTableName": "user_access",
+        "firstSchemaName": "public",
+        "firstRelation": "*",
+        "secondFieldNames": [
+          "id"
+        ],
+        "secondTableName": "type_user",
+        "secondSchemaName": "public",
+        "secondRelation": "1",
+        "checkPoints": []
+      },
+      {
+        "firstFieldNames": [
+          "branch_id"
+        ],
+        "firstTableName": "user_access",
+        "firstSchemaName": "public",
+        "firstRelation": "*",
+        "secondFieldNames": [
+          "id"
+        ],
+        "secondTableName": "branches",
+        "secondSchemaName": "public",
+        "secondRelation": "1",
+        "checkPoints": []
+      },
+      {
+        "firstFieldNames": [
+          "institution_id"
+        ],
+        "firstTableName": "user_access",
+        "firstSchemaName": "public",
+        "firstRelation": "*",
+        "secondFieldNames": [
+          "id"
+        ],
+        "secondTableName": "institutions",
+        "secondSchemaName": "public",
+        "secondRelation": "1",
+        "checkPoints": []
+      },
+      {
+        "firstFieldNames": [
+          "user_id"
+        ],
+        "firstTableName": "user_credentials",
+        "firstSchemaName": "public",
+        "firstRelation": "*",
+        "secondFieldNames": [
+          "id"
+        ],
+        "secondTableName": "users",
+        "secondSchemaName": "public",
+        "secondRelation": "1",
+        "checkPoints": []
+      }
+    ]
+  },
+  "views": {}
+}

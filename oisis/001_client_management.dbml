@@ -1,0 +1,76 @@
+Table institutions {
+    id int [pk, increment]
+    name varchar(50)
+    description text
+    status int 
+    logo int
+}
+
+Table branches{
+    id int [pk]
+    name varchar(255)
+    status int
+    address varchar(255)
+    institution_id int
+    logo varchar(255)
+    domain_name varchar(255)
+    postal_code varchar(255)
+    country varchar(255)
+    phone varchar(255)
+    currency varchar(255)
+    province varchar(255)
+    city varchar(255)
+}
+
+Ref: branches.institution_id < institutions.id
+
+Table type_user {
+    id int
+    code int
+    name varchar(255) 
+    slug varchar(255)
+    is_public is_public
+}
+
+Table users {
+    id int 
+    code int
+    username varchar(255)
+    fullname varchar(50)
+    email varchar(255)
+    photo varchar(255)
+    is_account_institiution bool
+}
+
+Table user_credentials {
+    id bigint [pk, increment]
+    user_id int
+    password varchar(255)
+    last_login datetime
+
+} 
+Ref: user_credentials.user_id > users.id
+
+Table user_access {
+    id int
+    user_id int
+    type_user_id int
+    branch_id int
+    institution_id int
+    is_active is_active
+}
+
+Ref: user_access.user_id > users.id
+Ref: user_access.type_user_id > type_user.id
+Ref: user_access.branch_id > branches.id
+Ref: user_access.institution_id > institutions.id
+
+Enum is_active {
+    true
+    false
+}
+
+Enum is_public {
+    true
+    false
+}
